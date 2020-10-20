@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>タイムアタック</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="css/timeatack.css">
+  </head>
+  <body>
+    <!--     モーダルウィンドウ     -->
+    <div id="modal">
+      <div class="modal-close"></div>
+        <img class="modal-content" src="../img/yubimoji.jpg">
+      </div>
+    </div>
+    <!--     ヘッダー     -->
+    <header>
+      <a class="title" href="index.html">Shuwagate</a>
+      <div id="yubimoji">指文字表</div>
+    </header>
+    <!--     メインコンテンツ     -->
+    <main>
+      <div class="left">
+        <div class="mission">
+          ガイド
+          <ul>
+            <li>中央のカメラを起動しよう！
+            <li>中央の文字を指文字で表現しよう！
+          </ul>
+        </div>
+      </div>
+      <div class="center">
+        <div id="question"></div>
+        <div class="video-wrapper">
+          <div id="status">Model Loading ...</div>
+          <canvas id="canvas" width="560" height="420"></canvas>
+          <video id="video" width="560" height="420"></video>
+        </div>
+        <div id="progress"></div>
+      </div>
+      <div class="right">
+        <div id="console"></div>
+      </div>
+    </main>
+    <!--     フッター     -->
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.10/dist/handtrack.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/timeatack.js"></script>
+  </body>
+</html>

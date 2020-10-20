@@ -1,0 +1,169 @@
+body {
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: ghostwhite;
+}
+
+#modal {
+	display: none;
+	z-index: 100;
+}
+
+.modal-close {
+	width: 100%;
+    height: 100vh;
+    position: absolute;
+	background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+	height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 20px;
+	border-radius: 5px;
+    background-color: white;
+}
+
+header {
+	display: flex;
+	color: navy;
+	box-shadow: 0 0 5px grey;
+	background-color: white;
+}
+
+main {
+	display: flex;
+	margin: 50px auto;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 3px grey;
+}
+
+.center {
+	margin: 0 auto;
+	padding: 20px 0;
+	border-radius: 5px;
+}
+
+.left {
+}
+
+.right {
+}
+
+footer {
+}
+
+.title {
+	padding: 20px 10px;
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	background-color: navy;
+}
+
+#yubimoji {
+	cursor: pointer;
+	margin-left: 16px;
+	padding-top: 16px;
+	font-size: 20px;
+	color: navy;
+}
+
+#yubimoji:hover {
+	border-bottom: solid navy 2px;
+}
+
+.usr {
+	margin-left: auto;
+	padding: 20px 20px;
+	font-size: 20px;
+	color: navy;
+}
+
+.signout {
+	margin: 20px 0;
+	padding: 0 20px;
+	font-size: 20px;
+	text-decoration: none;
+	color: navy;
+	border-left: solid 2px navy;
+}
+
+.mission {
+	width: 200px;
+	margin-top: 100px;
+	padding: 0 20px;
+	text-align: left;
+	font-size: 20px;
+	color: navy;
+}
+
+ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+li {
+	margin-top: 10px;
+}
+
+.video-wrapper {
+	position: relative;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#video {
+	transform: scale(-1, 1);
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 3px grey;
+	transition: 1s;
+}
+
+#question {
+	text-align: center;
+	font-size: 50px;
+	color: navy;
+	-webkit-text-stroke: 2px navy;
+}
+
+#progress {
+	width: 0;
+	margin-top: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: navy;
+}
+
+#console {
+	width: 200px;
+	margin-top: 100px;
+	padding: 0 20px;
+	text-align: center;
+	font-size: 20px;
+	color: navy;
+}
+
+#status {
+	cursor: pointer;
+	z-index: 2;
+	position: absolute;
+	left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: navy;
+}
+
+#canvas {
+	z-index: 1;
+	position: absolute;
+}
