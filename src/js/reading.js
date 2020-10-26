@@ -164,20 +164,26 @@ function reply() {
 		$("#textInput").val("");  //入力フォームを空にする
 		if(usrText == cpText) {
 			score++;
-			$("#progress").css({'width':(score*20)+'%'});
-			ram = Math.floor(Math.random() * Math.floor(vocab.length));
-			cpText = vocab[ram][0];  //テキストはランダムで決める
-			//console.log(cpText);
-			$("#video").html('<video controls src="' + vocab[ram][1] + '" type="video/mp4" width="560" height="420"></video>');
-            if(score == 5) {
+            if(score == 3) {
 				status = false;  //ユーザーからの入力を終了する
 				swal.fire({
-					title: "ステージクリア！",
-					text: "レベルが" + exp + "つあがりました！",
+					title: "レッスンクリア！",
 					icon: "success",
 				}).then(function() {
 					location.href = 'index.html';
 				});
+			}
+			else {
+				swal.fire({
+					title: score + "/3",
+					icon: "success",
+					timer: 1000,
+					showConfirmButton: false,
+				});
+				ram = Math.floor(Math.random() * Math.floor(vocab.length));
+				cpText = vocab[ram][0];  //テキストはランダムで決める
+				//console.log(cpText);
+				$("#video").html('<video controls src="' + vocab[ram][1] + '" type="video/mp4" width="560" height="420"></video>');
 			}
 		}
 		else {

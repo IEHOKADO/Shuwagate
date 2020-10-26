@@ -39,16 +39,11 @@ header {
 
 main {
 	display: flex;
-	margin: 50px auto;
-	border-radius: 5px;
-	background-color: white;
-	box-shadow: 0 0 3px grey;
+	margin: 0 auto;
 }
 
 .center {
 	margin: 0 auto;
-	padding: 20px 0;
-	border-radius: 5px;
 }
 
 .left {
@@ -80,76 +75,32 @@ footer {
 	border-bottom: solid navy 2px;
 }
 
-.usr {
-	margin-left: auto;
-	padding: 20px 20px;
-	font-size: 20px;
-	color: navy;
-}
-
-.signout {
-	margin: 20px 0;
-	padding: 0 20px;
-	font-size: 20px;
-	text-decoration: none;
-	color: navy;
-	border-left: solid 2px navy;
-}
-
-.mission {
-	width: 200px;
-	margin-top: 100px;
-	padding: 0 20px;
-	text-align: left;
-	font-size: 20px;
-	color: navy;
-}
-
-ul {
-	margin: 0;
-	padding-left: 20px;
-}
-
-li {
-	margin-top: 10px;
-}
-
 .video-wrapper {
 	position: relative;
-	margin-top: 10px;
-	text-align: center;
 }
 
 #video {
 	transform: scale(-1, 1);
 	border-radius: 5px;
-	background-color: white;
 	box-shadow: 0 0 3px grey;
-	transition: 1s;
 }
 
 #question {
-	text-align: center;
-	font-size: 50px;
-	color: navy;
-	-webkit-text-stroke: 2px navy;
-}
-
-#progress {
-	width: 0;
 	margin-top: 20px;
-	height: 20px;
-	border-radius: 20px;
-	background-color: navy;
+	text-align: center;
+	font-size: 70px;
+	font-weight: bold;
+	color: navy;
+	-webkit-text-stroke: 3px navy;
 }
 
 #console {
-	width: 200px;
-	margin-top: 100px;
-	padding: 0 20px;
-	text-align: center;
-	font-size: 20px;
-	color: navy;
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 15px;
+	border-radius: 5px;
+	color: white;
+	background-color: navy;
 }
 
 #status {
@@ -158,7 +109,7 @@ li {
 	position: absolute;
 	left: 50%;
     top: 50%;
-	transform: translate(-50%, -50%);	
+	transform: translate(-50%, -50%);
 	font-size: 30px;
 	color: navy;
 }

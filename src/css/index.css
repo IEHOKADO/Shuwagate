@@ -7,6 +7,10 @@ body {
 	background-color: ghostwhite;
 }
 
+a {
+	text-decoration: none;
+}
+
 #modal {
 	display: none;
 	z-index: 1;
@@ -40,7 +44,7 @@ header {
 main {
 	flex: 1;
 	display: flex;
-	margin: 50px auto 0 auto;
+	margin: 0 auto;
 }
 
 .center {
@@ -65,7 +69,6 @@ footer {
 .title {
 	padding: 20px 10px;
 	font-size: 20px;
-	text-decoration: none;
 	color: white;
 	background-color: navy;
 }
@@ -112,22 +115,20 @@ footer {
 
 .lesson {
 	display: flex;
-	margin-bottom: 50px;
+	margin-top: 50px;
 	background-color: white;
 	box-shadow: 0 0 3px grey;
+}
+
+.lesson:active {
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
 }
 
 .lesson-icon {
 	padding: 10px;
 	background-color: navy;
-	transition: 0.5s;
 }
-
-/*
-.lesson:hover > .lesson-icon {
-	background-color: navy;
-}
-*/
 
 .lesson-text {
 	padding: 30px 0px 30px 30px;
@@ -135,6 +136,7 @@ footer {
 
 .lesson-title {
 	font-size: 50px;
+	font-weight: bold;
 	color: navy;
 }
 
@@ -146,26 +148,4 @@ footer {
 
 .lesson-img {
 	margin-left: auto;
-}
-
-.lesson-start-wrapper {
-	margin-top: 20px;
-}
-
-.lesson-start {
-	display: inline-block;
-	margin-right: 30px;
-	padding: 10px 30px;
-	text-decoration: none;
-	font-size: 15px;
-	border: solid navy 2px;
-	color: navy;
-	border-radius: 5px;
-	background-color: white;
-	transition: 0.5s;
-}
-
-.lesson-start:hover {
-	color: white;
-	background-color: navy;
 }

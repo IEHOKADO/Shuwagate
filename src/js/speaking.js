@@ -12,7 +12,6 @@ const CLASSES = {0:'あ', 1:'い', 2:'う', 3:'え', 4:'お',
 				 41:'わ'}
 
 let vocab;  //問題の単語
-let exp;  //クリア時にもらえるレベル
 
 if(level == '1') {
 	vocab = [
@@ -26,7 +25,6 @@ if(level == '1') {
 		'やま','ゆみ','よる','らめ','るす','れあ','ろか',
 		'わに'
 	];
-	exp = 1;
 }
 
 else if(level == '2') {
@@ -42,7 +40,6 @@ else if(level == '2') {
 		'からい','ひるま','れきし','ろしあ',
 		'わるい'
 	];
-	exp = 2;
 }
 
 else if(level == '3') {
@@ -57,7 +54,6 @@ else if(level == '3') {
 		'いもうと','やわらかい','ゆうめい','たいよう','おわらい',
 		'うるさい','れいあうと','おもしろい','わいやれす'
 	];
-	exp = 3;
 }
 
 else location.href = 'index.html';  //URLがおかしい場合はメニューにとぶ
@@ -147,7 +143,7 @@ async function classify(tensor_image){
         return {probability: p,className: CLASSES[i]};
 	}).sort(function(a,b){
 		return b.probability-a.probability;
-	}).slice(0,10);
+	}).slice(0,5);
 	other(results);
 };
 
@@ -165,11 +161,11 @@ let idx = 0;  //色を変える文字の番号
 let cpText = vocab[Math.floor(Math.random() * Math.floor(vocab.length))];  //テキストはランダムで決める
 //cpText='ち'
 $("#question").html(cpText.replace(/(\S)/g, "<span>$&</span>"));
-$("#score").text(score + ' / 5');
 function other(results){
 	if(!status) return;
 	$("#console").empty();
 	results.forEach(function(p) {
+		//コンソールにクラスと確率を表示
 		$("#console").append('<div>・'+p.className+' : '+(p.probability*100).toFixed(2)+'%</div>');
 		if(p.probability.toFixed(2) > 0.01 && p.className == cpText[idx]){
 			$("#question span:nth-child(" + (idx+1) + ")").css({'color':'white'});
@@ -177,20 +173,26 @@ function other(results){
 		}
 		if(idx == cpText.length) {
 			score++;
-			idx = 0;  //色を変える文字の番号
-			cpText = vocab[Math.floor(Math.random() * Math.floor(vocab.length))];  //テキストはランダムで決める
-			//cpText='ち'
-			$("#question").html(cpText.replace(/(\S)/g, "<span>$&</span>"));
-			$("#progress").css({'width':(score*20)+'%'});
-			if(score == 5) {
+			idx = 0;  //番号をリセット
+			if(score == 3) {
 				status = false;  //処理をやめる
 				swal.fire({
-					title: "ステージクリア！",
-					text: "レベルが" + exp + "つあがりました！",
+					title: "レッスンクリア！",
 					icon: "success",
 				}).then(function() {
 					location.href = 'index.html';
 				});
+			}
+			else{
+				swal.fire({
+					title: score + "/3",
+					icon: "success",
+					timer: 1000,
+					showConfirmButton: false,
+				});
+				cpText = vocab[Math.floor(Math.random() * Math.floor(vocab.length))];  //テキストはランダムで決める
+				//cpText='ち'
+				$("#question").html(cpText.replace(/(\S)/g, "<span>$&</span>"));
 			}
 		}
 	});

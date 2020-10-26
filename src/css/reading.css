@@ -39,16 +39,12 @@ header {
 
 main {
 	display: flex;
-	margin: 50px auto;
-	border-radius: 5px;
-	background-color: white;
-	box-shadow: 0 0 3px grey;
+	margin: 0 auto;
 }
 
 .center {
 	margin: 0 auto;
-	padding: 50px 0 20px 0;
-	border-radius: 5px;
+	text-align: center;
 }
 
 .left {
@@ -80,80 +76,42 @@ footer {
 	border-bottom: solid navy 2px;
 }
 
-.usr {
-	margin-left: auto;
-	padding: 20px 20px;
-	font-size: 20px;
-	color: navy;
-}
-
-.signout {
-	margin: 20px 0;
-	padding: 0 20px;
-	font-size: 20px;
-	text-decoration: none;
-	color: navy;
-	border-left: solid 2px navy;
-}
-
-.mission {
-	width: 200px;
-	margin-top: 50px;
-	padding: 0 20px;
-	text-align: left;
-	font-size: 20px;
-	color: navy;
-}
-
-ul {
-	margin: 0;
-	padding-left: 20px;
-}
-
-li {
-	margin-top: 10px;
-}
-
 #video {
+	margin-top: 50px;
 	border-radius: 5px;
-	background-color: white;
 	box-shadow: 0 0 3px grey;
 }
 
-#progress {
-	width: 0;
-	margin-top: 20px;
-	height: 20px;
-	border-radius: 20px;
-	background-color: navy;
-	transition: 0.5s;
-}
-
 .userInput {
-	width: 200px;
-	margin-top: 50px;
-	padding: 0 20px;
-	text-align: center;
+	margin-top: 30px;
+	display: inline-block;
 }
 
 #textInput {
-	width: 200px;
+	width: 400px;
 	padding: 5px;
-	font-size: 20px;
+	font-size: 30px;
+	font-weight: bold;
 	color: navy;
+	background-color: ghostwhite;
 	outline: none;
 	border: none;
-    border-bottom: solid navy 2px;
+    border-bottom: solid navy 5px;
 }
 
 #buttonInput {
-	width: 200px;
-	margin-top: 20px;
+	cursor: pointer;
+	width: 130px;
 	padding: 5px;
-	font-size: 20px;
+	font-size: 30px;
 	border: none;
-	border-radius: 20px;
+	border-radius: 5px;
 	outline: none;
 	color: white;
 	background-color: navy;
+}
+
+#buttonInput:active {
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
 }
