@@ -89,22 +89,10 @@ async function load_class_model() {
 
 //ビデオの開始
 function startVideo() {
-	const constraints = {
-		audio: false,
-		video: {facingMode: "user"}
-	};
-	navigator.mediaDevices.getUserMedia(constraints)
-	.then( (stream) => {
-		video.srcObject = stream;
-		video.onloadedmetadata = (e) => {
-			video.play();
-		};
+    handTrack.startVideo(video).then(function (status) {
 		$("#status").remove();
 		main();
-	})
-	.catch( (err) => {
-		console.log(err.name + ": " + err.message);
-	});
+    });
 }
 
 //メインの処理
