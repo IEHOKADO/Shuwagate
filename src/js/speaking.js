@@ -62,7 +62,6 @@ const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
-let isVideo = false;  //ビデオが起動しているか
 let hand_model = null;  //手を検出するモデル
 let class_model = null;  //指文字を分類するモデル
 let tensor_image = null;  //入力画像の行列
@@ -79,7 +78,7 @@ handTrack.load(modelParams).then(l_model => {
     hand_model = l_model;
 	load_class_model();
 	$("#status").text("Model Loaded !")
-	toggleVideo();
+	startVideo();
 });
 
 //指文字分類器のモデル
@@ -89,20 +88,23 @@ async function load_class_model() {
 };
 
 //ビデオの開始
-function toggleVideo() {
-    if (!isVideo) {
-        startVideo();
-    }
-}
-
 function startVideo() {
-    handTrack.startVideo(video).then(function (status) {
-        if (status) {
-            isVideo = true;
-			$("#status").remove();
-			main();
-        }
-    });
+	const constraints = {
+		audio: false,
+		video: {facingMode: "user"}
+	};
+	navigator.mediaDevices.getUserMedia(constraints)
+	.then( (stream) => {
+		video.srcObject = stream;
+		video.onloadedmetadata = (e) => {
+			video.play();
+		};
+		$("#status").remove();
+		main();
+	})
+	.catch( (err) => {
+		console.log(err.name + ": " + err.message);
+	});
 }
 
 //メインの処理
