@@ -1,6 +1,6 @@
 # **Shuwagate**
 
-### What is Shuwagate ?
+## What is Shuwagate ?
 
 Shuwagateは指文字を学習できるWebアプリです。  
 
