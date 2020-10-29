@@ -83,8 +83,7 @@ handTrack.load(modelParams).then(l_model => {
 
 //指文字分類器のモデル
 async function load_class_model() {
-	//class_model = await tf.loadLayersModel(`https://raw.githubusercontent.com/IEHOKADO/FingerClassification/master/model/model.json`);
-	class_model = await tf.loadLayersModel(`https://raw.githubusercontent.com/IEHOKADO/FingerClassification/master/model_10-18/model.json`);
+	class_model = await tf.loadLayersModel(`https://raw.githubusercontent.com/IEHOKADO/Shuwagate/main/model/model.json`);
 };
 
 //ビデオの開始
