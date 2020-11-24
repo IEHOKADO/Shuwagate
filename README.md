@@ -28,7 +28,7 @@ TensorflowはGoogleが開発した機械学習フレームワークです。
 ## Demo
 
 デモはこちらです。  
-https://iehokado.github.io/Shuwagate/src/{:target="_blank"}
+https://iehokado.github.io/Shuwagate/src/
 
 ## Credit
 
