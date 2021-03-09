@@ -1,151 +1,142 @@
 body {
-	margin: 0 auto;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+    margin: 0 auto;
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: ghostwhite;
-}
-
-a {
-	text-decoration: none;
-}
-
-#modal {
-	display: none;
-	z-index: 1;
-}
-
-.modal-close {
-	width: 100%;
-    height: 100vh;
-    position: absolute;
-	background: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-	height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-	transform: translate(-50%,-50%);
-	padding: 20px;
-	border-radius: 5px;
-    background-color: white;
 }
 
 header {
-	display: flex;
-	color: navy;
-	box-shadow: 0 0 5px grey;
-	background-color: white;
+    padding: 20px 0;
+    display: flex;
+	background-color: rgb(30, 30, 100);
+}
+
+.header-content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
-	flex: 1;
-	display: flex;
-	margin: 0 auto;
+
 }
 
-.center {
+.main1 {
+    background-color: rgb(30, 30, 100, 0.8);
+}
+
+.main1-title{
+    text-align: center;
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 120px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.main1-detail{
     width: 800px;
+    margin: 30px auto 0 auto;
+    color: silver;
 }
 
-.left {
+.main1-button-wrapper{
+    width: fit-content;
+    margin: 30px auto 0 auto;
 }
 
-.right {
+.main1-button{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255, 50, 118, 0.8);
+    border-radius: 5px;
 }
 
-footer {
-	padding: 20px;
-	text-align: center;
-	font-size: 20px;
-	color: navy;
-	background-color: white;
-	box-shadow: 0 0 5px grey;
+.main1-button:hover{
+    background-color: rgba(255, 50, 118);
 }
 
-.title {
-	padding: 20px 10px;
-	font-size: 20px;
-	color: white;
-	background-color: navy;
+.main1-blank{
+    height: 120px;
 }
 
-#yubimoji {
-	cursor: pointer;
-	margin-left: 16px;
-	padding-top: 16px;
-	font-size: 20px;
-	color: navy;
+.main2{
+    margin-top: 100px;
 }
 
-#yubimoji:hover {
-	border-bottom: solid navy 2px;
+.main2-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(30, 30, 100);
 }
 
-.ranking {
-	margin-left: 16px;
-	padding-top: 16px;
-	font-size: 20px;
-	text-decoration: none;
-	color: navy;
+.main2-detail{
+    width: 600px;
+    margin: 10px auto 0 auto;
+    color: rgb(30, 30, 100);
 }
 
-.ranking:hover {
-	border-bottom: solid navy 2px;
+.main3{
+    display: flex;
+    margin-top: 70px;
 }
 
-.usr {
-	margin-left: auto;
-	padding: 20px;
-	font-size: 20px;
-	color: navy;
+.main3-img{
+    width: fit-content;
+    margin-left: auto;
 }
 
-.signout {
-	margin: 20px 0;
-	padding: 0 20px;
-	font-size: 20px;
-	text-decoration: none;
-	color: navy;
-	border-left: solid 2px navy;
+.main3-detail-wrapper{
+    width: 600px;
+    margin-right: auto;
 }
 
-.lesson {
-	display: flex;
-	margin-top: 50px;
-	background-color: white;
-	box-shadow: 0 0 3px grey;
+.main3-detail-title{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(30, 30, 100);
 }
 
-.lesson:active {
-	-webkit-transform: translateY(3px);
-	transform: translateY(3px);
+.main3-detail{
+    width: 400px;
+    margin: 30px auto 0 auto;
+    color: rgb(30, 30, 100);
 }
 
-.lesson-icon {
-	padding: 10px;
-	background-color: navy;
+.main4{
+    display: flex;
+    margin-top: 70px;
 }
 
-.lesson-text {
-	padding: 30px 0px 30px 30px;
+.main4-img{
+    width: fit-content;
+    margin-right: auto;
 }
 
-.lesson-title {
-	font-size: 50px;
-	font-weight: bold;
-	color: navy;
+.main4-detail-wrapper{
+    width: 600px;
+    margin-left: auto;
 }
 
-.lesson-detail {
-	margin-top: 20px;
-	font-size: 15px;
-	color: navy;
+.main4-detail-title{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(30, 30, 100);
 }
 
-.lesson-img {
-	margin-left: auto;
+.main4-detail{
+    width: 400px;
+    margin: 30px auto 0 auto;
+    color: rgb(30, 30, 100);
 }

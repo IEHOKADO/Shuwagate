@@ -1,42 +1,41 @@
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>指文字表現</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="css/speaking.css">
   </head>
+
   <body>
-    <!--     モーダルウィンドウ     -->
-    <div id="modal">
+    <!--     モーダル     -->
+    <div class="modal">
       <div class="modal-close"></div>
-        <img class="modal-content" src="../img/yubimoji.jpg">
-      </div>
+      <img class="modal-content" src="../img/yubimoji.jpg">
     </div>
-    <!--     ヘッダー     -->
-    <header>
-      <a class="title" href="index.html">Shuwagate</a>
-      <div id="yubimoji">指文字表</div>
-    </header>
-    <!--     メインコンテンツ     -->
+    <!--     メイン     -->
     <main>
-      <div class="left"></div>
-      <div class="center">
-        <div id="question"></div>
-        <div class="video-wrapper">
-          <div id="status">Model Loading ...</div>
-          <canvas id="canvas" width="560" height="420"></canvas>
-          <video id="video" width="560" height="420"></video>
-        </div>
-        <div id="console">・Class : Proba</div>
+      <!--     メイン1     -->
+      <div class="main1">
+        <a class="back-button" href="dashboard.html">もどる</a>
+        <div id="yubimoji">指文字表</div>
       </div>
-      <div class="right"></div>
+      <!--     メイン2     -->
+      <div class="main2">
+        <div class="video-wrapper">
+          <div id="status">準備中 ...</div>
+          <div id="question"></div>
+          <div id="console"></div>
+          <canvas id="canvas"></canvas>
+          <video id="video" width="800px" height="600px"></video>
+        </div>
+      </div>
     </main>
-    <!--     フッター     -->
-    <footer></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.10/dist/handtrack.min.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/speaking.js"></script>
   </body>
+
 </html>

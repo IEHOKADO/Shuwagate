@@ -1,64 +1,83 @@
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>ホーム</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="css/index.css">
   </head>
+
   <body>
-    <!--     モーダルウィンドウ     -->
-    <div id="modal">
-      <div class="modal-close"></div>
-        <img class="modal-content" src="../img/yubimoji.jpg">
-      </div>
-    </div>
-    <!--     ヘッダー     -->
+    <!--     ヘッダ     -->
     <header>
-      <a class="title" href="index.html">Shuwagate</a>
-      <div id="yubimoji">指文字表</div>
-    </header>
-    <!--     メインコンテンツ     -->
-    <main>
-      <div class="left"></div>
-      <div class="center">
-        <a href="speaking.html?level=1">
-          <div class="lesson">
-            <div class="lesson-icon"></div>
-            <div class="lesson-text">
-              <div class="lesson-title">指文字表現</div>
-              <div class="lesson-detail">文字から指文字へ翻訳してみよう！</div>
-            </div>
-            <img src="../img/speaking.png" height="245px "class="lesson-img"> 
-          </div>
-        </a>
-        <a href="reading.html?level=1">
-          <div class="lesson">
-            <div class="lesson-icon"></div>
-            <div class="lesson-text">
-              <div class="lesson-title">指文字読み取り</div>
-              <div class="lesson-detail">指文字から文字へ翻訳してみよう！</div>
-            </div>
-            <img src="../img/reading.png" height="245px "class="lesson-img"> 
-          </div>
-        </a>
-        <!--
-        <a href="timeatack.html">
-          <div class="lesson">
-            <div class="lesson-icon"></div>
-            <div class="lesson-text">
-              <div class="lesson-title">タイムアタック</div>
-              <div class="lesson-detail">今の実力を確認してみよう！</div>
-            </div>
-            <img src="../img/timeatack.png" height="245px "class="lesson-img"> 
-          </div>
-        </a>
-        -->
+      <div class="header-content">
+        <a class="header-title" href="index.html">Shuwagate</a>
       </div>
-      <div class="right"></div>
+    </header>
+    <!--     メイン     -->
+    <main>
+      <!--     メイン1     -->
+      <div class="main1">
+        <div class="main1-title">手話学習の<br>ファーストステップ</div>
+        <div class="main1-detail">
+          Shuwagateは指文字を学習するためのWebアプリです。
+          指文字とは「あ」,「a」などの書記言語を手で表現したものです。
+          指文字を学習することで、手話では表現できない単語などを表現することができ、よりコミュニケーションの幅が広がります。
+          指文字を学ぶことは手話を学ぶことよりもシンプルで、手話を学んでいないという人もすぐに覚えることができます。
+          Shuwagateで手話学習の第一歩を踏み出してみませんか。
+        </div>
+        <div class="main1-button-wrapper">
+          <a class="main1-button" href="dashboard.html">体験する</a>
+        </div>
+        <div class="main1-blank"></div>
+      </div>
+      <!--     メイン2     -->
+      <div class="main2">
+        <div class="main2-title">指文字学習をより直感的に</div>
+        <div class="main2-detail">
+          Shuwagateを利用することで、自分の手の形を確認しながら指文字を学習することができます。
+          ゲーム感覚で直感的かつ楽しく学習できるので効率的です。
+        </div>
+      </div>
+      <!--     メイン3     -->
+      <div class="main3">
+        <div class="main3-img">
+          <img src="../img/speaking.png" width="600px">
+        </div>
+        <div class="main3-detail-wrapper">
+          <div class="main3-detail">
+            <div class="main3-detail-title">画像処理技術を用いた指文字認識</div>
+            Shuwagateでは、手の形から指文字を判別する技術も開発しています。
+            これによって、自分の手の形を確認しながら学習することができます。
+          </div>
+          <!--
+          <div class="main3-detail">
+            <div class="main3-detail-title">共同作業をよりスマートに</div>
+            GitHubを利用することで、チームの連携を強化できます。問題を解決し、アイデアを実現し、その過程で互いに学び合うことができるようになります。
+          </div>
+          -->
+        </div>
+      </div>
+      <!--     メイン4     -->
+      <div class="main4">
+        <div class="main4-detail-wrapper">
+          <div class="main4-detail">
+            <div class="main4-detail-title">手話学習者の手本動画</div>
+            Shuwagateでは、手話学習者が実際に指文字を表現している動画を見ることができます。
+            正しい指の形を知ることで正確な会話が可能になります。
+          </div>
+          <!--
+          <div class="main4-detail">
+            <div class="main4-detail-title">共同作業をよりスマートに</div>
+            GitHubを利用することで、チームの連携を強化できます。問題を解決し、アイデアを実現し、その過程で互いに学び合うことができるようになります。
+          </div>
+          -->
+        </div>
+        <div class="main4-img">
+          <img src="../img/reading.png" width="600px">
+        </div>
+      </div>
     </main>
-    <!--     フッター     -->
-    <footer>@dentotsu</footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
   </body>
+
 </html>

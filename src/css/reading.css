@@ -1,18 +1,15 @@
 body {
 	margin: 0 auto;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
 	font-family: Arial, Helvetica, sans-serif;
 	background-color: ghostwhite;
 }
 
-#modal {
+.modal {
 	display: none;
-	z-index: 1;
 }
 
 .modal-close {
+	z-index: 100;
 	width: 100%;
     height: 100vh;
     position: absolute;
@@ -20,6 +17,7 @@ body {
 }
 
 .modal-content {
+	z-index: 100;
 	height: 500px;
     position: absolute;
     top: 50%;
@@ -30,61 +28,54 @@ body {
     background-color: white;
 }
 
-header {
-	display: flex;
-	color: navy;
-	box-shadow: 0 0 5px grey;
-	background-color: white;
-}
-
 main {
+
+}
+
+.main1 {
 	display: flex;
+	width: 800px;
 	margin: 0 auto;
+	padding-top: 30px;
 }
 
-.center {
-	margin: 0 auto;
-	text-align: center;
+.main2 {
+	 margin-top: 10px;
 }
 
-.left {
-}
-
-.right {
-}
-
-footer {
-}
-
-.title {
-	padding: 20px 10px;
-	font-size: 20px;
+.back-button {
 	text-decoration: none;
-	color: white;
-	background-color: navy;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(30, 30, 100);
 }
 
 #yubimoji {
 	cursor: pointer;
-	margin-left: 16px;
-	padding-top: 16px;
-	font-size: 20px;
-	color: navy;
+	margin-left: auto;
+	font-size: 25px;
+	font-weight: bold;
+	color: rgb(30, 30, 100);
 }
 
-#yubimoji:hover {
-	border-bottom: solid navy 2px;
+.video-wrapper {
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
 }
 
 #video {
-	margin-top: 50px;
-	border-radius: 5px;
-	box-shadow: 0 0 3px grey;
+	background-color: white;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
 
 .userInput {
-	margin-top: 30px;
-	display: inline-block;
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	transform: translate(-50%, 0%);
 }
 
 #textInput {
@@ -92,26 +83,33 @@ footer {
 	padding: 5px;
 	font-size: 30px;
 	font-weight: bold;
-	color: navy;
-	background-color: ghostwhite;
+	color: rgb(30, 30, 100);
+	background-color: rgb(255, 255, 255, 0.8);
 	outline: none;
 	border: none;
-    border-bottom: solid navy 5px;
+}
+
+#textInput:hover {
+	background-color: rgb(255, 255, 255);
 }
 
 #buttonInput {
 	cursor: pointer;
-	width: 130px;
+	width: 100px;
+	margin-left: 5px;
 	padding: 5px;
 	font-size: 30px;
-	border: none;
-	border-radius: 5px;
+	font-weight: bold;
+	color: rgb(30, 30, 100);
+	background-color: rgb(255, 255, 255, 0.8);
 	outline: none;
-	color: white;
-	background-color: navy;
+	border: none;
+}
+
+#buttonInput:hover {
+	background-color: rgb(255, 255, 255);
 }
 
 #buttonInput:active {
-	-webkit-transform: translateY(3px);
-	transform: translateY(3px);
+	transform: translateY(1px);
 }

@@ -1,40 +1,38 @@
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>指文字読み取り</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="css/reading.css">
   </head>
+
   <body>
     <!--     モーダルウィンドウ     -->
-    <div id="modal">
+    <div class="modal">
       <div class="modal-close"></div>
-        <img class="modal-content" src="../img/yubimoji.jpg">
-      </div>
+      <img class="modal-content" src="../img/yubimoji.jpg">
     </div>
-    <!--     ヘッダー     -->
-    <header>
-      <a class="title" href="index.html">Shuwagate</a>
-      <div id="yubimoji">指文字表</div>
-    </header>
     <!--     メインコンテンツ     -->
     <main>
-      <div class="left"></div>
-      <div class="center">
-        <div id="video"></div>
-        <div id="progress"></div>
-        <div class="userInput">
-          <input id="textInput" type="text" maxlength="10" name="msg">
-          <input id="buttonInput" type="submit" value="送信する">
+      <div class="main1">
+        <a class="back-button" href="dashboard.html">もどる</a>
+        <div id="yubimoji">指文字表</div>
+      </div>
+      <div class="main2">
+        <div class="video-wrapper">
+          <div class="userInput">
+            <input id="textInput" type="text" maxlength="10" name="msg">
+            <input id="buttonInput" type="submit" value="送信">
+          </div>
+          <div id="video"></div>
         </div>
       </div>
-      <div class="right"></div>
     </main>
-    <!--     フッター     -->
-    <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/reading.js"></script>
   </body>
+
 </html>
