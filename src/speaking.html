@@ -2,35 +2,45 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>指文字表現</title>
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="css/speaking.css">
+    <title>Shuwagate | speaking</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-    <!--     モーダル     -->
-    <div class="modal">
-      <div class="modal-close"></div>
-      <img class="modal-content" src="../img/yubimoji.jpg">
+    <div id="modal">
+      <div id="modal-close"></div>
+      <img src="../img/yubimoji.jpg">
     </div>
-    <!--     メイン     -->
-    <main>
-      <!--     メイン1     -->
-      <div class="main1">
-        <a class="back-button" href="dashboard.html">もどる</a>
-        <div id="yubimoji">指文字表</div>
+    <header>
+      <div>
+        <a href="index.html">Shuwagate</a>
       </div>
-      <!--     メイン2     -->
-      <div class="main2">
+    </header>
+    <main>
+      <div id="main16">
         <div class="video-wrapper">
-          <div id="status">準備中 ...</div>
-          <div id="question"></div>
-          <div id="console"></div>
+          <div id="window0">
+            <p id="start">はじめる</p>
+          </div>
+          <div id="window1">
+            <p id="status">準備中 ...</p>
+          </div>
+          <div id="window2">
+            <p id="question"></p>
+            <p id="console"></p>
+            <p id="hint">指文字表</p>
+          </div>
           <canvas id="canvas"></canvas>
           <video id="video" width="800px" height="600px"></video>
         </div>
+        <!-- <canvas id="canvas-check"></canvas> -->
       </div>
     </main>
+    <footer>
+      <div>
+        <p>© dentotsu. 2022.</p>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handtrackjs@0.0.10/dist/handtrack.min.js"> </script>

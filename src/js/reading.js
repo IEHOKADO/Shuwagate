@@ -146,7 +146,7 @@ else if (level == '3') {
 	['ぺっとぼとる', 'reading_level3/pettobotoru']];
 }
 
-else location.href = 'dashboard.html';  //URLがおかしい場合はメニューにとぶ
+else location.href = 'index.html';  //URLがおかしい場合はメニューにとぶ
 
 let status = true;  //処理が可能か判断する
 let score = 0;  //正解数
@@ -166,7 +166,7 @@ function reply() {
 					title: "レッスンクリア！",
 					icon: "success",
 				}).then(function () {
-					location.href = 'dashboard.html';
+					location.href = 'index.html';
 				});
 			}
 			else {

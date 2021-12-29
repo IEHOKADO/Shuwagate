@@ -1,0 +1,316 @@
+body {
+    display: flex;
+    flex-direction: column;
+	font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header {
+	background-color: #424874;
+    display: flex;
+    height: 80px;
+}
+
+header div {
+    margin: auto;
+    width: 800px;
+}
+
+header a {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+	background-color: #424874;
+    display: flex;
+    height: 64px;
+}
+
+footer div {
+    margin: auto;
+    width: 800px;
+}
+
+footer p {
+    color: #FFFFFF;
+}
+
+#main0 {
+    background-color: #A6B1E1;
+    padding: 120px 0;
+}
+
+#main0 h2 {
+    width: 800px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    font-size: 48px;
+    text-align: center;
+}
+
+#main0 p {
+    width: 800px;
+    margin: 32px auto 0 auto;
+    color: #F4EEFF;
+}
+
+#main0 a {
+    opacity: 0.8;
+    display: block;
+    background-color: #424874;
+    border-radius: 5px;
+    width: 128px;
+    padding: 8px 0;
+    margin: 32px auto 0 auto;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#main0 a:hover {
+    opacity: 1.0;
+}
+
+#main1 {
+    padding: 64px 0;
+}
+
+#main1 h2 {
+    width: 800px;
+    margin: 0 auto;
+    color: #424874;
+    font-size: 32px;
+    text-align: center;
+}
+
+#main1 p {
+    width: 800px;
+    margin: 16px auto 0 auto;
+    color: #424874;
+}
+
+#main2 {
+    display: flex;
+    padding: 16px 0;
+}
+
+#main2 img {
+    margin-left: auto;
+}
+
+#main2 div {
+    width: 400px;
+    margin-right: auto;
+}
+
+#main2 h3 {
+    color: #424874;
+    font-size: 24px;
+}
+
+#main2 p {
+    color: #424874;
+}
+
+#main2 a {
+    opacity: 0.8;
+    display: block;
+    background-color: #424874;
+    border-radius: 5px;
+    width: 96px;
+    padding: 8px 0;
+    margin: 32px auto 0 auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#main2 a:hover {
+    opacity: 1.0;
+}
+
+#main3 {
+    display: flex;
+    padding: 16px 0;
+}
+
+#main3 img {
+    margin-right: auto;
+}
+
+#main3 div {
+    width: 400px;
+    margin-left: auto;
+}
+
+#main3 h3 {
+    color: #424874;
+    font-size: 24px;
+}
+
+#main3 p {
+    color: #424874;
+}
+
+#main3 a {
+    opacity: 0.8;
+    display: block;
+    background-color: #424874;
+    border-radius: 5px;
+    width: 96px;
+    padding: 8px 0;
+    margin: 32px auto 0 auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#main3 a:hover {
+    opacity: 1.0;
+}
+
+#modal {
+	display: none;
+}
+
+#modal-close {
+    position: absolute;
+	z-index: 100;
+	background: #000000;
+    height: 100vh;
+    opacity: 0.8;
+	width: 100%;
+}
+
+#modal img {
+    left: 50%;
+    position: absolute;
+	transform: translate(-50%,-50%);
+    top: 50%;
+	z-index: 100;
+    background-color: #FFFFFF;
+	border-radius: 5px;
+	height: 600px;
+}
+
+#main16 {
+     padding: 32px 0;
+}
+
+.video-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 800px;
+}
+
+#window0 {
+
+}
+
+#window1 {
+    display: none;
+}
+
+#window2 {
+    display: none;
+}
+
+#start {
+    bottom: 32px;
+    left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+    background-color: #424874;
+    border-radius: 5px;
+	color: #FFFFFF;
+	cursor: pointer;
+	font-size: 24px;
+    margin: 0;
+    opacity: 0.8;
+    padding: 8px 0;
+    text-align: center;
+    width: 128px;
+}
+
+#start:hover {
+    opacity: 1;
+}
+
+#status {
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+    top: 50%;
+	z-index: 2;
+	color: #FFFFFF;
+	font-size: 32px;
+    margin: 0;
+    text-align: center;
+    width: 800px;
+}
+
+#question {
+	left: 50%;
+	position: absolute;
+	top: 0%;
+	transform: translate(-50%, 0%);
+	z-index: 2;
+	background-color: rgb(255, 255, 255, 0.9);
+	font-size: 64px;
+	font-weight: bold;
+    margin: 0;
+	padding: 0 32px;
+	text-align: center;
+	-webkit-text-stroke: 3px #000000;
+}
+
+#console {
+	left: 8px;
+	position: absolute;
+	top: 32px;
+	z-index: 2;
+    font-weight: bold;
+    margin: 0;
+}
+
+#hint {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 2;
+	cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#canvas {
+	position: absolute;
+	z-index: 1;
+}
+
+#video {
+	transform: scale(-1, 1);
+	background-color: #A6B1E1;
+    border-radius: 5px;
+}
+
+#canvas-check {
+    background-color: #DCD6F7;
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+}
