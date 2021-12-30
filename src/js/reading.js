@@ -1,6 +1,6 @@
-const level = location.search.slice(7);  //難易度をURLパラメータから取得
+const level = location.search.slice(7);
 
-let vocab;  // 問題の単語
+let vocab;
 
 if (level == '1') {
 	vocab = [['あか', 'reading_level1/aka'],
@@ -146,45 +146,42 @@ else if (level == '3') {
 	['ぺっとぼとる', 'reading_level3/pettobotoru']];
 }
 
-else location.href = 'index.html';  //URLがおかしい場合はメニューにとぶ
+else location.href = 'index.html';
 
-let status = true;  //処理が可能か判断する
-let score = 0;  //正解数
-let ram = Math.floor(Math.random() * Math.floor(vocab.length));  //乱数の生成
-let cpText = vocab[ram][0];  //テキストはランダムで決める
-//console.log(cpText);
-$("#video").html('<video controls src="../video/' + vocab[ram][1] + '.mp4" type="video/mp4" width="800px" height="600px"></video>');
-function reply() {
+let status = true;
+let score = 0;
+let answer;
+function main() {
 	if (status) {
-		let usrText = $("#textInput").val();  //ユーザーのテキスト
-		$("#textInput").val("");  //入力フォームを空にする
-		if (usrText == cpText) {
+		let usrText = $('#textInput').val();
+		$('#textInput').val('');
+		if (usrText == answer) {
 			score++;
 			if (score == 3) {
-				status = false;  //ユーザーからの入力を終了する
+				status = false;
 				swal.fire({
-					title: "レッスンクリア！",
-					icon: "success",
+					title: 'レッスンクリア！',
+					icon: 'success',
 				}).then(function () {
 					location.href = 'index.html';
 				});
 			}
 			else {
 				swal.fire({
-					title: score + "/3",
-					icon: "success",
+					title: score + '/3',
+					icon: 'success',
 					timer: 1000,
 					showConfirmButton: false,
 				});
-				ram = Math.floor(Math.random() * Math.floor(vocab.length));
-				cpText = vocab[ram][0];  //テキストはランダムで決める
-				$("#video").html('<video controls src="../video/' + vocab[ram][1] + '.mp4" type="video/mp4" width="800px" height="600px"></video>');
+				let ram = Math.floor(Math.random() * Math.floor(vocab.length));
+				answer = vocab[ram][0];
+				$('#video-reading').html('<video controls src="../video/' + vocab[ram][1] + '.mp4" type="video/mp4" width="800px" height="600px"></video>');
 			}
 		}
 		else {
 			swal.fire({
-				title: "不正解！",
-				icon: "error",
+				title: '不正解！',
+				icon: 'error',
 				timer: 1000,
 				showConfirmButton: false,
 			});
@@ -192,18 +189,30 @@ function reply() {
 	}
 }
 
-$("#textInput").keypress(function (e) {
-	if ((e.which == 13) && document.getElementById("textInput").value != "") reply();
-})
+function init() {
+	let ram = Math.floor(Math.random() * Math.floor(vocab.length));
+	answer = vocab[ram][0];
+	$('#video-reading').html('<video controls src="../video/' + vocab[ram][1] + '.mp4" type="video/mp4" width="800px" height="600px"></video>');
+}
 
-$("#buttonInput").click(function () {
-	if (document.getElementById("textInput").value != "") reply();
-})
+$('#hint').click(function () {
+	$('#modal').show();
+});
 
-$("#yubimoji").click(function () {
-	$(".modal").fadeIn();  // モーダルを表示
-})
+$('#modal-close').click(function () {
+	$('#modal').hide();
+});
 
-$(".modal-close").click(function () {
-	$(".modal").fadeOut();  // モーダルを非表示
-})
+$('#start').click(function () {
+	$('#window0').hide();
+	$('#window1').show();
+	init();
+});
+
+$('#textInput').keypress(function (e) {
+	if ((e.which == 13) && document.getElementById('textInput').value != '') main();
+});
+
+$('#buttonInput').click(function () {
+	if (document.getElementById('textInput').value != '') main();
+});

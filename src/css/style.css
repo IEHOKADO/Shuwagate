@@ -301,10 +301,12 @@ footer p {
 	z-index: 1;
 }
 
-#video {
+#video-speaking {
 	transform: scale(-1, 1);
 	background-color: #A6B1E1;
     border-radius: 5px;
+    height: 600px;
+    width: 800px;
 }
 
 #canvas-check {
@@ -313,4 +315,56 @@ footer p {
     margin: 0 auto;
     height: 100px;
     width: 100px;
+}
+
+#main32 {
+    padding: 32px 0;
+}
+
+#video-reading {
+    background-color: #A6B1E1;
+    border-radius: 5px;
+    height: 600px;
+    width: 800px;
+}
+
+#Input-wrapper {
+	bottom: 64px;
+	left: 50%;
+	z-index: 1;
+	position: absolute;
+	transform: translate(-50%, 0%);
+    display: flex;
+}
+
+#textInput {
+	background-color: #FFFFFF;
+	border: none;
+	font-size: 32px;
+	font-weight: bold;
+    opacity: 0.9;
+	outline: none;
+	padding: 5px;
+	width: 400px;
+}
+
+#textInput:hover {
+	opacity: 1.0;
+}
+
+#buttonInput {
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+	font-size: 32px;
+	font-weight: bold;
+	margin-left: 5px;
+	outline: none;
+    opacity: 0.9;
+	padding: 5px;
+	width: 100px;
+}
+
+#buttonInput:hover {
+	opacity: 1.0;
 }

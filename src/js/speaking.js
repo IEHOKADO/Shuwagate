@@ -63,7 +63,7 @@ else if (level == '3') {
 
 else location.href = 'index.html';
 
-const video = document.getElementById('video');
+const video = document.getElementById('video-speaking');
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
